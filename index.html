@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gerador de nomes para restaurantes</title>
+  </head>
+  <style media="screen">
+    body {
+      width: 80%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    button {
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .rest {
+      margin: 10px 0px;
+      font-size: 40px;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div class="title">
+        <h1>Gerador de Nomes para Restaurantes</h1>
+      </div>
+      <div class="reload" onclick="getName()">
+        <button type="button" name="button">GERAR</button>
+      </div>
+    </div>
+    <div class="name">
+      O nome do seu restaurante é:
+      <div class="rest">
+
+      </div>
+    </div>
+    <script type="text/javascript">
+      let r1 = ['Coxinha','Caranguejo','Yaksoba','Temaki','Cantina','Sushi','Pastelaria','Restaurante','Paraiso','Fogueira','Sabor','O Mundo','A Bahia','Boi','Churrascaria','Fogueira','Sorriso','Alegria','Viagem','Delicia','Macarronada','Brasa','Casa','Cozinha','Pizzaria','Pizza','Moqueca','Peixe','Ceu','Flor','Tapioca','Sanduiche','Feijoada']
+      let r2 = ['do Marcelo','da Bahia','de Jesus','Top','Internacional','Massa','do Futuro','do Marquinhos','Azul','de Tapioca','do Passado','Stop','Go','da Delicia','de Yemanja','ao Vivo','da Mistura','10','Tropical','com Ketchup','com Farofa','de Milho','na Brasa','no Espeto','Quente','no Prato','com Paladar','na Quentinha','com Maionese','com Presunto','dos Infernos','de Sal','Fitness','de Siri', 'com Quiabo', 'de Banana da Terra', 'de Aipim', 'com Churrasco', 'no Oleo Quente', 'com Sopa', 'com Salada', 'com Carne', 'do Interior','da Maria','do Rodizio Amaldicoado', 'Tradicional','na Chapa', 'Show', 'da Ilha', 'de Salvador', 'com Azeite', 'no Dende', 'de Madeira','Light','da Cidade','com Sorriso', 'com Refresco','de Soja Organica', 'Gourmet', 'do Chef', 'Especial', 'Master', 'do Ceu', 'dos Brothers', 'com Sabor']
+
+      function randomName(){
+        return r1[Math.floor(Math.random() * r1.length)] + ' ' + r2[Math.floor(Math.random() * r2.length)];
+      }
+
+      function getName() {
+        document.querySelector(".rest").innerText = randomName();
+      }
+
+      getName();
+    </script>
+  </body>
+</html>
